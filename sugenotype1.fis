@@ -1,0 +1,59 @@
+[System]
+Name='sugenotype1'
+Type='sugeno'
+Version=2.0
+NumInputs=2
+NumOutputs=2
+NumRules=9
+AndMethod='prod'
+OrMethod='probor'
+ImpMethod='prod'
+AggMethod='sum'
+DefuzzMethod='wtaver'
+
+[Input1]
+Name='E'
+Range=[-1 1]
+NumMFs=3
+MF1='NS':'trimf',[-1.5 -1 0]
+MF2='Z0':'trimf',[-1 0 1]
+MF3='PS':'trimf',[0 1 1.5]
+
+[Input2]
+Name='R'
+Range=[-1 1]
+NumMFs=3
+MF1='NS':'trimf',[-1.5 -1 0]
+MF2='Z0':'trimf',[-1 0 1]
+MF3='PS':'trimf',[0 1 1.5]
+
+[Output1]
+Name='u1'
+Range=[-5 5]
+NumMFs=5
+MF1='NM':'constant',[-5]
+MF2='NS':'constant',[-2]
+MF3='Z0':'constant',[0]
+MF4='PS':'constant',[2]
+MF5='PM':'constant',[5]
+
+[Output2]
+Name='u2'
+Range=[-1 1]
+NumMFs=5
+MF1='NM':'constant',[-5]
+MF2='NS':'constant',[-2]
+MF3='Z0':'constant',[0]
+MF4='PS':'constant',[2]
+MF5='PM':'constant',[5]
+
+[Rules]
+3 1, 3 3 (1) : 1
+3 2, 4 4 (1) : 1
+3 3, 5 5 (1) : 1
+2 1, 2 2 (1) : 1
+2 2, 3 3 (1) : 1
+2 3, 4 4 (1) : 1
+1 1, 1 1 (1) : 1
+1 2, 2 2 (1) : 1
+1 3, 3 3 (1) : 1
