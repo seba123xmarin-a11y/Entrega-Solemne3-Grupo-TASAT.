@@ -1,4 +1,4 @@
-# Entrega-Solemne3-Grupo-TASAT.
+# Entrega-Solemne3-Grupo-TASAT
 Integrantes: 
 Daniel Núñez, 
 Victoria Calderón, 
